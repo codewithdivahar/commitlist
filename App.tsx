@@ -5,21 +5,29 @@
  * @format
  */
 
-import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import { Text, View } from 'react-native';
 
+const Stack = createStackNavigator();
+
+
+const HomeScreen = () => {
+  return (
+    <View className='flex-1 items-center justify-center'>
+      <Text>Home Screen</Text>
+    </View>
+  )
+}
 function App() {
 
   return (
-    <View style={styles.container}>
-      <Text>Hello World</Text>
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={HomeScreen} options={{headerShown: false}}/>
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
 
 export default App;
