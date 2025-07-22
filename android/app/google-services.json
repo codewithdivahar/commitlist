@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "882717080836",
+    "project_id": "commitlist-e9e5a",
+    "storage_bucket": "commitlist-e9e5a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:882717080836:android:a2df843746c41efd67e451",
+        "android_client_info": {
+          "package_name": "com.commitlist"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcSaQIOUbMWke7mk0_VXfdrHnd-QonERA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
