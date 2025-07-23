@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <View className='flex-1 justify-center items-center'>
       <Text>{user?.email}</Text>
-      <Button title="Login" onPress={() => logout()}/>
+      <Button title="Logout" onPress={() => logout()}/>
     </View>
   )
 }

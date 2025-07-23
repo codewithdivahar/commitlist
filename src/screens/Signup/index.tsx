@@ -7,7 +7,7 @@ const Signup = ({navigation}) => {
   return (
     <View className='flex-1 justify-center items-center'>
       <Text>Signup</Text>
-      <Button title="Signup" onPress={() => signup('divahar', 'divahar123')}/>
+      <Button title="Signup" onPress={() => signup('divahar@gmail.com', 'divahar123')}/>
     <Button
             title="Go to Login"
             onPress={() => navigation.goBack()}
