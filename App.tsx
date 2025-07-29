@@ -7,26 +7,55 @@
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { Text, View } from 'react-native';
+import Login from './src/screens/Login';
+import Signup from './src/screens/Signup';
+import Home from './src/screens/Home';
+import { AuthProvider, useAuth } from './src/context/AuthProvider';
+import BootSplash from "react-native-bootsplash";
+
 
 const Stack = createStackNavigator();
 
+const AppNavigator = () => {
+  const { user, authLoading } = useAuth();
 
-const HomeScreen = () => {
-  return (
-    <View className='flex-1 items-center justify-center'>
-      <Text>Home Screen</Text>
-    </View>
-  )
-}
-function App() {
+  if(authLoading) return null;
 
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Home" component={HomeScreen} options={{headerShown: false}}/>
-      </Stack.Navigator>
+    <NavigationContainer onReady={() => {
+      BootSplash.hide();
+    }}>
+      {user ? (
+        <Stack.Navigator>
+          <Stack.Screen
+            name="Home"
+            component={Home}
+            options={{ headerShown: false }}
+          />
+        </Stack.Navigator>
+      ) : (
+        <Stack.Navigator>
+          <Stack.Screen
+            name="Login"
+            component={Login}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="Signup"
+            component={Signup}
+            options={{ headerShown: false }}
+          />
+        </Stack.Navigator>
+      )}
     </NavigationContainer>
+  );
+};
+
+function App() {
+  return (
+    <AuthProvider>
+      <AppNavigator />
+    </AuthProvider>
   );
 }
 
