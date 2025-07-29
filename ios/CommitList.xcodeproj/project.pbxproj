@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		1A7090C6D046437D9B3337A6 /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A661DDA5624B39BC5FA725 /* BootSplash.storyboard */; };
+		201817AC2AF6427481483749 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DE7EB1F154A47868D55628E /* Colors.xcassets */; };
 		22316B0F2E2B4CE9003567F0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22316B0E2E2B4CE9003567F0 /* GoogleService-Info.plist */; };
 		6E96A3069B190B23C580B2CF /* Pods_CommitList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ECB8628AD4841DCC4DECEC3 /* Pods_CommitList.framework */; };
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
@@ -21,11 +23,13 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = CommitList/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = CommitList/Info.plist; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = CommitList/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		1DE7EB1F154A47868D55628E /* Colors.xcassets */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = folder.assetcatalog; name = Colors.xcassets; path = CommitList/Colors.xcassets; sourceTree = "<group>"; };
 		1F65083CDD0D88443ECE8C66 /* Pods-CommitList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommitList.release.xcconfig"; path = "Target Support Files/Pods-CommitList/Pods-CommitList.release.xcconfig"; sourceTree = "<group>"; };
 		22316B0E2E2B4CE9003567F0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2ECB8628AD4841DCC4DECEC3 /* Pods_CommitList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CommitList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = CommitList/AppDelegate.swift; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = CommitList/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		84A661DDA5624B39BC5FA725 /* BootSplash.storyboard */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = BootSplash.storyboard; path = CommitList/BootSplash.storyboard; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -50,6 +54,8 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */,
+				84A661DDA5624B39BC5FA725 /* BootSplash.storyboard */,
+				1DE7EB1F154A47868D55628E /* Colors.xcassets */,
 			);
 			name = CommitList;
 			sourceTree = "<group>";
@@ -166,6 +172,8 @@
 				22316B0F2E2B4CE9003567F0 /* GoogleService-Info.plist in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				D087597B90F8A8F7A6CFC7AB /* PrivacyInfo.xcprivacy in Resources */,
+				1A7090C6D046437D9B3337A6 /* BootSplash.storyboard in Resources */,
+				201817AC2AF6427481483749 /* Colors.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

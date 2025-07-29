@@ -11,16 +11,20 @@ import Login from './src/screens/Login';
 import Signup from './src/screens/Signup';
 import Home from './src/screens/Home';
 import { AuthProvider, useAuth } from './src/context/AuthProvider';
+import BootSplash from "react-native-bootsplash";
+
 
 const Stack = createStackNavigator();
 
 const AppNavigator = () => {
   const { user, authLoading } = useAuth();
 
-  if (authLoading) return null;
+  if(authLoading) return null;
 
   return (
-    <NavigationContainer>
+    <NavigationContainer onReady={() => {
+      BootSplash.hide();
+    }}>
       {user ? (
         <Stack.Navigator>
           <Stack.Screen
