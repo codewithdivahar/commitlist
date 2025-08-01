@@ -11,28 +11,33 @@ import Login from './src/screens/Login';
 import Signup from './src/screens/Signup';
 import Home from './src/screens/Home';
 import { AuthProvider, useAuth } from './src/context/AuthProvider';
-import BootSplash from "react-native-bootsplash";
-
+import BootSplash from 'react-native-bootsplash';
+import { Provider } from 'react-redux';
+import { store } from './src/store/store';
 
 const Stack = createStackNavigator();
 
 const AppNavigator = () => {
   const { user, authLoading } = useAuth();
 
-  if(authLoading) return null;
+  if (authLoading) return null;
 
   return (
-    <NavigationContainer onReady={() => {
-      BootSplash.hide();
-    }}>
+    <NavigationContainer
+      onReady={() => {
+        BootSplash.hide();
+      }}
+    >
       {user ? (
-        <Stack.Navigator>
-          <Stack.Screen
-            name="Home"
-            component={Home}
-            options={{ headerShown: false }}
-          />
-        </Stack.Navigator>
+        <Provider store={store}>
+          <Stack.Navigator>
+            <Stack.Screen
+              name="Home"
+              component={Home}
+              options={{ headerShown: false }}
+            />
+          </Stack.Navigator>
+        </Provider>
       ) : (
         <Stack.Navigator>
           <Stack.Screen
