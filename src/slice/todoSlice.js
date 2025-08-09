@@ -12,7 +12,6 @@ export const loadTodos = createAsyncThunk('todos/loadTodos', async () => {
         console.error('Error loading data', error)
         return [];
     }
-    
 });
 
 export const saveTodos = createAsyncThunk('todos/saveTodos', async (todos) => {
@@ -33,7 +32,6 @@ const todoSlice = createSlice({
     },
     reducers: {
         addTodo: (state, action) => {
-            console.log("Todo Slice --->", action)
             const newTodo = {
                 id: Date.now().toString(),
                 text: action.payload,
@@ -43,7 +41,6 @@ const todoSlice = createSlice({
             state.items.push(newTodo)
         },
         toggleTodo: (state, action) => {
-            console.log("Todo Slice --->", action)
             const todo = state.items.find(todo => todo.id === action.payload)
             if(todo) {
                 todo.completed = !todo.completed

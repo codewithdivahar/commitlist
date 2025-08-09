@@ -7,11 +7,11 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useAuth } from '../../context/AuthProvider';
 import { useDispatch, useSelector } from 'react-redux';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { addTodo, deleteTodo, toggleTodo } from '../../slice/todoSlice';
+import { addTodo, deleteTodo, loadTodos, saveTodos, toggleTodo } from '../../slice/todoSlice';
 
 const Home = () => {
   const { logout, user } = useAuth();
@@ -22,6 +22,15 @@ const Home = () => {
     error,
   } = useSelector((state: any) => state?.todos);
   const [inputText, setInputText] = useState('');
+
+  useEffect(() => {
+    dispatch(loadTodos())
+  },[])
+
+  useEffect(() => {
+    console.log("Todos called")
+    dispatch(saveTodos(todos))
+  },[todos, dispatch])
 
   const handleAddTodo = () => {
     const trimmedText = inputText.trim()
